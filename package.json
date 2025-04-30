@@ -1,0 +1,18 @@
+{
+  "name": "uno-game-codeninjas",
+  "version": "1.0.0",
+  "description": "Proyecto colaborativo para recrear el juego del UNO",
+  "main": "script.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vite": "^6.3.4"
+  }
+}
