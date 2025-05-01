@@ -1,10 +1,10 @@
 
 
-const colores = ["#E63946", "#2A9D8F", "#457B9D", "#F4A261"];
-const numeros = [0,1,2,3,4,5,6,7,8,9,]
+// const colores = ["#E63946", "#2A9D8F", "#457B9D", "#F4A261"];
+// const numeros = [0,1,2,3,4,5,6,7,8,9,]
 
 
-const game = {
+let game = {
     players: [], 
     deck: [],
     currentPlayer: 0,
@@ -14,15 +14,15 @@ const game = {
 const player = {
     hand: [],
     type: "human"
-}
+};
 
 const carta = {
     color: "red",
     number: 0
-}
+};
 
 function startGame() {
-    const game = {
+    let game = {
         players: [], 
         deck: [],
         currentPlayer: 0,
@@ -50,8 +50,11 @@ function startGame() {
     return game;
 }
 
-function playTurn() {
-    currentPlayer = (currentPlayer + 2) % 4 
+
+console.log(startGame)
+
+// function playTurn() {
+//     currentPlayer = (currentPlayer + 2) % 4 
     
 
-}
+// }
