@@ -16,56 +16,55 @@ function getDeckCards() {
         });
     });
 }
+// const colores = ["#E63946", "#2A9D8F", "#457B9D", "#F4A261"];
+// const numeros = [0,1,2,3,4,5,6,7,8,9,]
 
-const game = {
-    players: [], 
-    deck: [],
-    currentPlayer: 0,
-    lastCard: null 
-};
 
-const player = {
-    hand: [],
-    type: "human"
+function createDeck() { // FUNCION DE PRUEBA
+    const deck = [];
+    for (let i = 0; i < 108; i++) {
+        deck.push({
+            color: "red",
+            number: 0
+        });
+    }
+    return deck;
 }
 
-const carta = {
-    color: "red",
-    number: 0
+
+function createPlayer(deck) {
+    const player = {
+        hand: [],
+        type: "human"
+    };
+    for (let i = 0; i < 7; i++) {
+        const deck = createDeck()
+        const drawnCard = deck.pop();
+        player.hand.push(drawnCard);
+    }
+    return player;
 }
 
 function startGame() {
     const game = {
-        players: [], 
-        deck: [],
+        players: [],
+        deck: createDeck(),
         currentPlayer: 0,
-        lastCard: null 
+        lastCard: null
+    };
+    for (let i = 0; i < 4; i++) {
+        const player = createPlayer(game.deck);
+        game.players.push(player);
     }
-    for (let i=0; i<108; i++){
-        game.deck.push({
-            color: "red",
-            number: 0
-        })
-    }
-    for (let i=0; i<4; i++){
-        const player = {
-            hand: [],
-            type: "human"
-        }
-        for (let j=0; j<7; j++){
-           const drawnCard = game.deck.pop()
-           player.hand.push(drawnCard);
-        }
-        game.players.push(player)
-    }   
-    game.lastCard = game.deck.pop()
+    game.lastCard = game.deck.pop();
 
     return game;
 }
 
-function playTurn() {
-    currentPlayer = (currentPlayer + 2) % 4 
-    
 
 }
+console.log(startGame())
+console.log(createPlayer())
+
+
 
