@@ -86,11 +86,10 @@ img{
 
 .card-slot-user:hover {
     transition: 0.5s;
-    transform: translateY(-50%);
-    
+    transform: translateY(-15%);
 }
 
 .card-slot-robar:hover {
     transform: scale(1.2);
     transition: 0.5s;
-    }
+}
