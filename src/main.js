@@ -1,5 +1,21 @@
+const colorList = ["#E63946", "#2A9D8F", "#457B9D", "#F4A261"];
+const numberList = [0,1,2,3,4,5,6,7,8,9,];
 
 
+const deck = [];
+function getDeckCards() {
+    colorList.forEach(color => {
+        numberList.forEach(number => {
+            const count = number === 0 ? 1 : 2;
+            Array(count).fill().forEach(() => {
+                deck.push({
+                    color: color,
+                    number: number
+                });
+            }); 
+        });
+    });
+}
 // const colores = ["#E63946", "#2A9D8F", "#457B9D", "#F4A261"];
 // const numeros = [0,1,2,3,4,5,6,7,8,9,]
 
@@ -46,6 +62,7 @@ function startGame() {
 }
 
 
+}
 console.log(startGame())
 console.log(createPlayer())
 
