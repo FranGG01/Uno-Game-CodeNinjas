@@ -60,6 +60,8 @@ function startGame() {
 
     return game;
 }
+
+
 console.log(startGame())
 console.log(createPlayer())
 
