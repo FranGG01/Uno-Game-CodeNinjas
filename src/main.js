@@ -62,7 +62,7 @@ function startGame() {
 }
 
 
-}
+
 console.log(startGame())
 console.log(createPlayer())
 
